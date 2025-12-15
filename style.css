@@ -60,9 +60,23 @@ body{
 .home{
     height: 100vh; /*sets the height of an element to 100% of the viewport height.*/
     display: flex;
-    align-items: center;
+    /* background: url('profile.png') no-repeat;
+    background-size: cover;
+    background-position: center; */
     padding: 0 10%; /*sets 0 padding for top and bottom and 10% padding for left and right*/
 }
+.middle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-image
+{
+    position: relative;
+    left: 200px;
+}
+
 
 .home-content{
     /* background-color: rgb(162, 231, 25); */
