@@ -234,21 +234,42 @@ body{
     margin-top: 30px;
 }
 
+
 .about-btn .btn {
-    display: inline-block;
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px 28px;
-    background: greenyellow;
+    border: 2px solid;
     border-radius: 10px;
-    border: 2px solid greenyellow;
-    color: rgb(33, 66, 176);
     text-decoration: none;
     font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    color:rgb(33, 66, 176);
+    background: greenyellow;
+}
+
+.about-btn .btn::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(33, 66, 176);
+    z-index: -100;
     transition: 0.5s;
 }
 
-.about-btn .btn:hover {
-    background: transparent;
-    color: greenyellow;
+.about-btn .btn:hover::before{
+    width: 100%;
+
+}
+
+.about-btn .btn:hover{
+    color:yellowgreen;
 }
 
 /* Skills Section */
@@ -425,21 +446,45 @@ body{
 }
 
 .contact form .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     cursor: pointer;
     padding: 15px 40px;
     background: greenyellow;
     border-radius: 10px;
-    border: 2px solid greenyellow;
+    border: 2px solid;
     color: rgb(33, 66, 176);
     font-size: 18px;
     font-weight: 600;
-    transition: 0.5s;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.contact form .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(33, 66, 176);
+    z-index: -100;
+    transition: all 0.5s ease;
 }
 
 .contact form .btn:hover {
     background: transparent;
-    color: greenyellow;
+    color: yellowgreen;
+}
+
+.contact form .btn:hover::before {
+    width: 100%;
 }
 
 /* Footer */
